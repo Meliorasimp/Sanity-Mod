@@ -12,6 +12,8 @@ public class ModItems {
 
     public static final RegistryObject<Item> ULTRABRIGHT_TORCH = items.register("ultrabright_torch",
             () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> CRYSTAL_SHARD = items.register("crystal_shard",
+            () -> new Item(new Item.Properties()));
 
     public static void register(IEventBus eventBus) {
         items.register(eventBus);
