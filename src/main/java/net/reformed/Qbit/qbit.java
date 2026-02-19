@@ -1,4 +1,4 @@
-package net.reformed.SanityAwakening;
+package net.reformed.Qbit;
 
 import com.mojang.logging.LogUtils;
 import net.minecraftforge.common.MinecraftForge;
@@ -11,27 +11,28 @@ import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.reformed.SanityAwakening.block.ModBlocks;
-import net.reformed.SanityAwakening.item.ModItems;
+import net.reformed.Qbit.block.ModBlocks;
+import net.reformed.Qbit.item.ModItems;
 import org.slf4j.Logger;
 
-@Mod(sanityawakening.MOD_ID)
-public class sanityawakening
+@Mod(qbit.MOD_ID)
+public class qbit
 {
     // Define mod id in a common place for everything to reference
-    public static final String MOD_ID = "sanityawakening";
+    public static final String MOD_ID = "qbit";
     // Directly reference a slf4j logger
     public static final Logger LOGGER = LogUtils.getLogger();
 
-    public sanityawakening(FMLJavaModLoadingContext context)
+    public qbit(FMLJavaModLoadingContext context)
     {
         IEventBus modEventBus = context.getModEventBus();
         modEventBus.addListener(this::commonSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
 
-        ModBlocks.register(modEventBus);
+        ModBlocks.Register(modEventBus);
         ModItems.register(modEventBus);
+
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);

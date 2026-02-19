@@ -1,14 +1,14 @@
-package net.reformed.SanityAwakening.item;
+package net.reformed.Qbit.item;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
-import net.reformed.SanityAwakening.sanityawakening;
+import net.reformed.Qbit.qbit;
 
 public class ModItems {
     public static final DeferredRegister<Item> items =
-            DeferredRegister.create(ForgeRegistries.ITEMS, sanityawakening.MOD_ID);
+            DeferredRegister.create(ForgeRegistries.ITEMS, qbit.MOD_ID);
 
     public static final RegistryObject<Item> ULTRABRIGHT_TORCH = items.register("ultrabright_torch",
             () -> new Item(new Item.Properties()));
